@@ -1,5 +1,16 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@keyframes blink {
+  0% {
+    color: #f1f1f1;
+  }
+  50% {
+    color: #00ffff;
+  }
+  100% {
+    color: #f1f1f1;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -39,8 +50,21 @@ a {
   padding: 0 24px;
 }
 
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
-  font-size: 2rem;
+  width: 56px;
+  height: 56px;
+}
+
+.logo-name {
+  margin-left: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  animation: blink 2s infinite;
 }
 
 .nav-list {
