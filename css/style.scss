@@ -23,6 +23,7 @@ body {
 
 .construcao {
     text-align: center;
+    margin-top: 100px;
 }
 
 header {
@@ -51,7 +52,7 @@ a {
 
 .nav-list {
     @include centerElement;
-    gap: 60px;
+    gap: 50px;
 }
 
 .nav-link {
