@@ -2,11 +2,16 @@
 
 @import 'sass/utils';
 
-
-
 $white1: #f1f1f1;
 $black1: #262626;
 $blue1: #00ffff;
+
+@keyframes blink {
+    0% { color: $white1 }
+    50% { color: $blue1 }
+    100% { color: $white1 }
+}
+
 
 * {
     padding: 0;
@@ -46,8 +51,21 @@ a {
 
 }
 
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
 .logo {
-    font-size: 2rem;
+    width: 56px;
+    height: 56px;
+}
+
+.logo-name {
+    margin-left: 5px;
+    font-size: 12px; 
+    font-weight: bold;
+    animation: blink 2s infinite;
 }
 
 .nav-list {
