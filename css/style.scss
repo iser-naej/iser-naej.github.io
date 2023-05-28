@@ -110,9 +110,31 @@ a {
     @include configSection;
 }
 
+/* styles to section home */
 .section-page.home {
     color: $black2;
-    background-color: $white2;  
+    background-color: $white2; 
+}
+
+.section-page.home > div {
+    position: absolute;
+    top: 50%;
+    width: 50%;
+}
+
+.section-page h1 {    
+    color: $black1;
+    font-size: 2rem;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.section-page h3 {    
+    color: $gold1;
+    padding-left: 5px;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 500;
 }
 
 .section-page h2 {    
@@ -127,10 +149,9 @@ a {
     color: $black2;
 }
 
-
-.section-page.portfolio {
+.section-page.about {
     color: $black2;
-    background-color: $white1;
+    background-color: $white1;  
 }
 
 /* styles to section skills */
@@ -139,14 +160,34 @@ a {
     background-color: $white1;  
 }
 
+/* styles to section potfolio */
+.section-page.portfolio {
+    color: $black2;
+    background-color: $white1;
+}
+
 .div-flex {
     padding-top: 10px;
     display: flex;
+    margin-right: 10px;
 }
 
 .div-flex > div > h6 {
-    font-size: 16px;
-    color: $black3;
+    font-size: 0.8rem;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: $gold1;
+}
+
+/* Estilos footer */
+.footer-page {
+    background-color: $gold1;
+}
+
+.footer-page > p {
+    padding: 40px;
+    text-align: center;
+    color: $white1;
+
 }
 
 /* Estilos para dispositivos móveis */
@@ -177,6 +218,7 @@ a {
         width: 100%;
         text-align: center;
         transition: 0.3s;
+        z-index: 9999;
 
     }
 
@@ -199,6 +241,25 @@ a {
     .div-flex > div {
         margin-bottom: 10px;
     }
+
+    .section-page.home > div {
+        width: 75%;
+    }
+
+    .section-page h1 {    
+        color: $black1;
+        font-size: 1.5rem;
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-weight: 500;
+    }
+
+    .section-page h3 {    
+        color: $gold1;
+        font-size: 1rem;
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-weight: 500;
+    }
+    
 
 
 }
