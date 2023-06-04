@@ -149,9 +149,22 @@ a {
     color: $black2;
 }
 
+/* styles to section about */
 .section-page.about {
     color: $black2;
     background-color: $white1;  
+}
+
+.section-page.about > div {
+    background-color: $white2;
+    width: 50%;
+    height: 100%;
+}
+
+.section-page.about > div > p {
+    padding: 10px;
+    text-align: justify;
+ 
 }
 
 /* styles to section skills */
@@ -259,7 +272,18 @@ a {
         font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         font-weight: 500;
     }
+
+    /* about */
+
+    .section-page.about > div {
+        width: 100%;
+    }
     
+    .section-page.about > div > p {
+        text-align: left; 
+        font-size: 0.9rem;
+        padding: 3px;
+    }
 
 
 }
