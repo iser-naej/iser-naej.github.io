@@ -1,16 +1,69 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@keyframes blink {
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+.card:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes floating {
   0% {
-    color: #ada49e;
+    transform: translateY(0);
   }
   50% {
-    color: #48483f;
+    transform: translateY(-10px);
   }
   100% {
-    color: #ada49e;
+    transform: translateY(0);
+  }
+}
+.floating-text {
+  animation: floating 3s ease-in-out infinite;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.card {
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+}
+
+.card-title {
+  padding-top: 10px;
+  font-size: 16px;
+}
+
+.flutuante {
+  width: 200px;
+  height: 100px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.flutuante.flutuando {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  transform: translateY(-10px);
+}
+
+.flutuante:hover {
+  transform: translateY(-5px);
+}
+
+@keyframes blink {
+  0% {
+    color: #999999;
+  }
+  50% {
+    color: #525252;
+  }
+  100% {
+    color: #999999;
   }
 }
 .construcao {
@@ -45,7 +98,7 @@ li {
 }
 
 a {
-  color: #303030;
+  color: #111111;
   text-decoration: none;
 }
 
@@ -70,6 +123,7 @@ a {
 .logo-name {
   margin-left: 5px;
   font-size: 16px;
+  font-family: "Karla", Arial, Helvetica, sans-serif;
   font-weight: 500;
   animation: blink 2s infinite;
 }
@@ -85,8 +139,13 @@ a {
   transition: 0.7 ease;
 }
 
+.nav-link {
+  color: #111111;
+  font-weight: 500;
+}
+
 .nav-link:hover {
-  color: #ada49e;
+  color: #999999;
 }
 
 .hamburguer {
@@ -100,98 +159,87 @@ a {
   height: 3px;
   margin: 5px auto;
   transition: all 0.3 ease-in-out;
-  background-color: #ada49e;
+  background-color: #525252;
 }
 
-.section-page {
-  box-sizing: border-box;
-  padding: 25px 40px;
-  height: 100vh;
+.title {
+  color: #111111;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.div-skills {
+  width: 50%;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #111111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-text {
+  text-align: center;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.social-icons {
+  font-size: 25px;
+  gap: 10px;
+  padding: 0;
+}
+
+.social-icons a {
+  color: #111111;
+}
+
+.social-icons a:hover {
+  color: #525252;
 }
 
 /* styles to section home */
-.section-page.home {
-  color: #525252;
-  background-color: #fafafa;
+.section.home {
+  height: 100vh;
+  color: #111111;
+  background-color: #ffffff;
 }
 
-.section-page.home > div {
+.section.home div {
   position: absolute;
   top: 50%;
   width: 50%;
+  text-align: left;
 }
 
-.section-page h1 {
-  color: #303030;
-  font-size: 2rem;
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  font-weight: 500;
-}
-
-.section-page h3 {
-  color: #ada49e;
-  padding-left: 5px;
+.section.home > div > h3 {
+  color: #999999;
+  padding-left: 2px;
   font-size: 1.5rem;
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.section.home > div > h1 {
+  font-size: 3rem;
   font-weight: 500;
 }
 
-.section-page h2 {
-  color: #303030;
-  font-size: 2rem;
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  font-weight: 500;
+.container.skills {
+  padding: 50px 0 50px 20px;
+  margin-right: 0;
 }
 
-.section-page p {
-  margin-top: 5px;
-  color: #525252;
-}
-
-/* styles to section about */
-.section-page.about {
-  color: #525252;
-  background-color: #ffffff;
-}
-
-.section-page.about > div {
-  background-color: #fafafa;
-  width: 50%;
-  height: 100%;
-}
-
-.section-page.about > div > p {
-  padding: 10px;
-  text-align: justify;
-}
-
-/* styles to section skills */
-.section-page.skills {
-  color: #525252;
-  background-color: #ffffff;
-}
-
-/* styles to section potfolio */
-.section-page.portfolio {
-  color: #525252;
-  background-color: #ffffff;
-}
-
-.div-flex {
-  padding-top: 10px;
-  display: flex;
-  margin-right: 10px;
-}
-
-.div-flex > div > h6 {
-  font-size: 0.8rem;
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  color: #ada49e;
+#portfolio {
+  background-color: #f8f8f8;
 }
 
 /* Estilos footer */
 .footer-page {
-  background-color: #ada49e;
+  background-color: #111111;
 }
 
 .footer-page > p {
@@ -220,49 +268,60 @@ a {
     top: 70px;
     gap: 0;
     flex-direction: column;
-    background-color: #ada49e;
+    background-color: #525252;
     width: 100%;
     text-align: center;
     transition: 0.3s;
     z-index: 9999;
   }
-  .nav-link:hover {
+  .nav-link {
     color: #ffffff;
+  }
+  .nav-link:hover {
+    color: #999999;
   }
   .nav-item {
     margin: 16px 0;
   }
+  .title {
+    font-size: 1.5rem;
+  }
   .nav-list.active {
     left: 0;
   }
-  .div-flex {
-    display: block;
-  }
-  .div-flex > div {
-    margin-bottom: 10px;
-  }
-  .section-page.home > div {
+  .section.home div {
+    position: absolute;
+    top: 50%;
     width: 75%;
   }
-  .section-page h1 {
-    color: #303030;
-    font-size: 1.5rem;
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-weight: 500;
+  .section.home > div > h1 {
+    font-size: 1.9rem;
   }
-  .section-page h3 {
-    color: #ada49e;
+  .section.home > div > h3 {
     font-size: 1rem;
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-weight: 500;
   }
-  /* about */
-  .section-page.about > div {
-    width: 100%;
+  .footer-page {
+    display: block;
+    z-index: auto;
   }
-  .section-page.about > div > p {
-    text-align: left;
-    font-size: 0.9rem;
-    padding: 3px;
+  .container.skills {
+    text-align: center;
+  }
+  .circles {
+    text-align: center !important;
+  }
+  .circle {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .circle-text {
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
   }
 }/*# sourceMappingURL=style.css.map */
